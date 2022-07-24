@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Alta Telefónica</title>
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+    <body>
+        <h1>Formulario Información Alta Telefónica</h1>
+        <form>
+            <fieldset>
+                <legend>Datos Personales</legend>
+                Nombre:&nbsp;<input type="text" name="nombre" maxlength="30" value=""></input><br/>
+                Apellidos:&nbsp;<input type="text" name="apellidos" maxlenght="60" value=""></input><br/>
+                Dirección:&nbsp;<input type="text" name="direccion" maxlenght="60" value=""></input><br/>
+                Código Postal:&nbsp;<input type="text" id="cp" maxlength="5" value=""></input><br/>
+                Provincia:&nbsp;<input type="text" id="provincia" maxlength="60" value=""></input>
+            </fieldset>
+            <fieldset>
+                <legend>Tipo de Contratación</legend>
+                <input type="radio" checked="checked" name="contratacion">Nueva Contratación</input>
+                <input type="radio" name="contratacion">Portabilidad</input>
+                <input type="radio" name="contratacion">Cambio de Contrato</input><br/>
+                <br/>
+                Elija la compañía actual:
+                <select>
+                    <option>Movistar</option>
+                    <option>Orange</option>
+                    <option>Yoigo</option>
+                    <option>Vodafone</option>
+                    <option>No tengo compañía</option>
+                </select><br/><br/>
+                En caso de portabilidad, elija la nueva compañía:
+                <select>
+                    <option>Movistar</option>
+                    <option>Orange</option>
+                    <option>Yoigo</option>
+                    <option>Vodafone</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Datos Bancarios</legend>
+                País:&nbsp;<input type="text" id="pais" value="ES" readonly="readonly">&nbsp;(Sólo valido ES)</input><br/>
+                Control IBAN:&nbsp;<input type="text" id="iban" placeholder="XX" maxlength="2" value="">&nbsp;(Dos dígitos)</input><br/>
+                Entidad:&nbsp;<input type="text" id="entidad" placeholder="XXXX" maxlength="4" value="">&nbsp;(Cuatro dígitos)</input><br/>
+                Sucursal:&nbsp;<input type="text" id="sucursal" placeholder="XXXX" maxlength="4" value="">&nbsp;(Cuatro dígitos)</input><br/>
+                DC:&nbsp;<input type="text" id="dc" placeholder="XX" maxlength="4" value="">&nbsp;(Dos dígitos)</input><br/>
+                Cuenta:&nbsp;<input type="text" id="cuenta" placeholder="XXXXXXXXXX" maxlength="10" value="">&nbsp;(Diez dígitos)</input>
+            </fieldset>
+            <fieldset>
+                <legend>Datos Estadísticos - ¿Cómo nos conoció?</legend>
+                <input type="checkbox" name="TV">A través de la TV</input><br/>
+                <input type="checkbox" name="radio">A través de la radio</input><br/>
+                <input type="checkbox" name="internet">A través de la internet</input><br/>
+                <br/>
+                <input type="range" min="1" max="5" step="1" value="0" id="valorationRange">Valoración [1-5]</input><br/><br/>
+                Fecha de la encuesta: <input type="date" value="2019-01-01" style="background-color: white;" id="fecha" min="2019-01-01"/>
+            </fieldset>
+            <br/>
+                <button type="button" onclick="validacionPostal ()">Enviar Datos</button>
+                <button type="reset" value="" name="resetear">Borrar Datos</button>
+                <br/>
+                <br/>
+                <button type="button" onclick="valorationAlert ()" style="background-color: pink;">Mostrar Valoración</button>
+                <button type="button" onclick="mostrarCuenta ()" style="background-color: pink;">Mostrar Cuenta</button>
+                <button type="button" onclick="showFecha ()" style="background-color: pink;">Mostrar Dia Semana</button>
+        </form>
+    </body>
+</html>

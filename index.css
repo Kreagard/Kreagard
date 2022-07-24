@@ -1,0 +1,15 @@
+fieldset {
+    background-color: aqua;
+}
+legend {
+    background-color: red;
+    color: white;
+}
+h1 {
+    color:blue;
+    text-shadow: 0.1em 0.1em 0.1em yellow;
+    text-align: center;
+}
+input {
+    background-color: yellow;
+}
